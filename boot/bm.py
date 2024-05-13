@@ -10,9 +10,9 @@ if not spaces > 0 and (spaces & (spaces - 1)) == 0:
 print('\033[7m' + ' ' * int(spaces) + 'Boot menu' + ' ' * int(spaces) + '\033[0m')
 
 for fname in listdir('boot/os'):
-    f = path.join('boot/os', fname)
-    if path.isfile(f):
-      with open(f, 'r') as file:
-        file_content = file.readlines()
-        if file_content[0][:16] == '#emu_boot def os':
-          print(file_content[0][17:])
+  f = path.join('boot/os', fname)
+  if path.isfile(f):
+    with open(f, 'r') as file:
+      file_content = file.readlines()
+      if file_content[0][:16] == '#emu_boot def os':
+        print(file_content[0][17:])
