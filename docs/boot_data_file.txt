@@ -1,0 +1,16 @@
+Boot data file must contain:
+
+  1: main boot file location, for example: os/emuOS/boot.py
+  2: safe mode boot file location, for example: os/emuOS/safe_mode.py OR None
+  3: user-friendly OS name, example: EmuOS
+  4: boot mode
+    r (recommended: you can access variables from emu_bios.boot): read: read boot file contents and run them with exec
+    p: process: use supbrocess to run boot file
+    c: command: use os.system to run boot file
+Example data file
+{
+  "boot": "os/emuOS/boot.py",
+  "safe_mode": "os/emuOS/safe_mode.py",
+  "os_fname": "EmuOS",
+  "boot_mode": "r"
+}

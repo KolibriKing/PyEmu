@@ -1,0 +1,6 @@
+{
+  "boot": "boot/bm.py",
+  "safe_mode": "None",
+  "os_fname": "Bootmenu",
+  "boot_mode": "r"
+}
